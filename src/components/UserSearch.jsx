@@ -16,7 +16,7 @@ export function UserSearch() {
         const data = await response.json();
         setUsers(data);
 
-    
+    // trie insertion
         const trie = new UserSearchTrie();
         data.forEach((user) => trie.insert(user));
         setSearchTrie(trie);
